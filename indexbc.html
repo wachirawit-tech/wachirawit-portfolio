@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <h1 style="margin: 0;">BASIC CYBERSECURITY</h1>
+        
+        
+
+    </div>
+</header>
+
+    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio pufar</title>
+    <style>
+        body { font-family: 'Kanit', 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #f8f9fa; }
+        header { 
+
+            
+            background: rgb(231, 64, 17); color: #ffffff; padding: 2rem; text-align: center; box-shadow: 0 10px 12px rgba(0,0,0,0.1);
+        }
+                /* ส่วนตกแต่ง (CSS) */
+                /* ส่วนรายการผลงานหลัก */
+        .works-list {
+            max-width: 1200px;       /* กว้างสูงสุดเพื่อไม่ให้ล้นหน้าจอเกินไป */
+            margin: auto;            /* จัดกลางเว็บแนวนอน */
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;  /* ให้แต่ละรายการ (work-item) เรียงต่อกันลงมา */
+            gap: 30px;               /* ระยะห่างระหว่างรายการ */
+        }
+
+        /* สไตล์หัวข้อ */
+        .works-list h2 {
+            text-align: center;
+            color: #e74011;         /* ใช้สีส้มที่คุณเพิ่งถามมาเพื่อเน้นหัวข้อ */
+            margin-bottom: 40px;
+        }
+
+        /* สไตล์แต่ละรายการ (Layout หลักแบบFlexbox) */
+        .work-item {
+            display: flex;
+            justify-content: flex-start; /* จัดให้ลูกๆ เริ่มจากซ้ายสุด */
+            align-items: center;     /* จัดกลางแนวตั้ง */
+            gap: 20px;               /* ระยะห่างระหว่างรูปภาพกับกล่องข้อความ */
+            width: 100%;             /* กว้างเต็มพื้นที่แม่ */
+        }
+
+        /* สไตล์กรอบรูป */
+        .work-image {
+            width: 450px;            /* กำหนดความกว้างของรูป */
+            height: 250px;           /* กำหนดความสูงให้เป็นสี่เหลี่ยมจัตุรัส (ตามรูปตัวอย่าง) */
+            border-radius: 20px;     /* ทำมุมโค้งมนตามรูปตัวอย่าง */
+            overflow: hidden;        /* ตัดรูปที่อยู่ด้านในตามมุมโค้งของกรอบ */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* เพิ่มเงานิดนึงเพื่อให้ดูลอยขึ้น */
+            background-color: #f1f1f1; /* สีพื้นหลังกรณีรูปยังไม่โหลด */
+        }
+
+        /* สไตล์ของรูปภาพในกรอบ */
+        .work-image img {
+            width: 100%;             /* กว้างเต็มพื้นที่กรอบ */
+            height: 100%;            /* สูงเต็มพื้นที่กรอบ */
+            object-fit: cover;       /* ตัดรูปให้พอดีกรอบโดยไม่เสียสัดส่วน (ทริคสำคัญ) */
+        }
+
+        /* สไตล์กล่องข้อความ */
+        .work-content {
+            background: white;       /* พื้นหลังสีขาวสำหรับกล่องข้อความ */
+            padding: 30px;           /* พื้นที่หายใจด้านใน */
+            border-radius: 20px;     /* ทำมุมโค้งมนตามรูปตัวอย่าง */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* เพิ่มเงาให้นูนขึ้นมานิดนึง */
+            width: 100%;             /* กว้างเต็มพื้นที่แม่ (ที่เหลือจากรูปภาพ) */
+            max-width: 700px;       /* ความกว้างสูงสุดของกล่องข้อความ เพื่อไม่ให้ยาวเกินไป */
+        }
+
+        /* สไตล์ข้อความในกล่อง */
+        .work-content h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .work-content p {
+            margin: 0;
+            color: #666;
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+<div class="works-list">
+
+
+    <div class="work-item">
+        <div class="work-image">
+            <img src="bc1.png" alt="Work 1">
+            </div>
+        <div class="work-content">
+            <h3>ออกโดย</h3>
+            <p>สำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ (NCSA Thailand)</p>
+        </div>
+    </div>
+
+    <div class="work-item">
+        <div class="work-image">
+            <img src="bc2.png" alt="Work 2">
+        </div>
+        <div class="work-content">
+            <h3>ทักษะที่ได้รับ</h3>
+            <p>ความเข้าใจเกี่ยวกับภัยคุกคามทางไซเบอร์, การป้องกันข้อมูลส่วนบุคคล, และหลักการความปลอดภัยดิจิทัลเบื้องต้น</p>
+        </div>
+    </div>
+
+   
+
+</div>
+
+</body>
+</html>

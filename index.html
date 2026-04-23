@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+    <div id="top"></div>
+    <header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <h1 style="margin: 0;">PORTFOLIO</h1>
+        
+        <div style="display: flex; gap: 15px;">
+            <a href="#works" style="color: white; text-decoration: none; font-size: 1.2rem; font-weight: 500; border: 1px solid white; padding: 5px 15px; border-radius: 5px;">
+                ผลงาน
+            </a>
+            
+            <a href="#others" style="color: white; text-decoration: none; font-size: 1.2rem; font-weight: 500; border: 1px solid white; padding: 5px 15px; border-radius: 5px;">
+                ฝึกประสบการณ์และอื่นๆ
+            </a>
+
+            
+        </div>
+
+    </div>
+</header>
+
+    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Portfolio pufar</title>
+    <style>
+        /* ส่วนตกแต่ง (CSS) */
+        body { font-family: 'Kanit', 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #f8f9fa; }
+        header {
+            background: rgb(231, 64, 17); color: #ffffff; padding: 2rem; text-align: center; box-shadow: 0 10px 12px rgba(0,0,0,0.1);
+        }
+        body {
+       
+}
+        html { 
+            scroll-behavior: smooth;
+        }
+        
+        .container {    max-width: 1675px; 
+                        margin: auto; 
+                        padding: 20px 0px; 
+                    }
+        
+        /* การจัดวางแบบ Grid สำหรับแสดงผลงาน */
+        .project-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: flex-start;
+            padding-left: 0;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 12px rgba(0,0,0,0.1);
+            width: 400px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover { transform: translateY(-5px); }
+        .project-info { padding: 15px; }
+        .project-info h3 { margin: 0 0 10px 0; color: #007bff; }
+
+        img { width: 100%; height: 350; object-fit: cover; background: #ddd; }
+
+        /* ส่วน Layout แบบแยกสองฝั่ง */
+        .intro-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 20px;
+            flex-wrap: wrap; /* รองรับมือถือ ถ้าจอกว้างไม่พอจะตกลงมาข้างล่าง */
+        }
+
+        .intro-text {
+            background: white;
+            padding: 40px;
+            border-radius: 30px; /* มุมโค้งมนตามรูป */
+            box-shadow: 0 10px 12px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .intro-text p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .intro-image {
+            width: 400px;
+            height: 400px;
+            border-radius: 40px; /* มุมโค้งมนตามรูป */
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="intro-section">
+    <div class="intro-text">
+        <p>Name : Mr.Wachirawit Suknipitapong</p>
+        <p>Nickname : Pufar</p>
+        <p>Birthday : 4 April 2010</p>
+        <p>Nationality : Thai</p>
+        <p>Study department : Science-Mathematics</p>
+    </div>
+
+    <div class="intro-image">
+        <img src="11.JPG" alt="My Photo"> 
+        </div>
+</div>
+
+<div id="works">
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0;">ผลงาน</h1>
+        <div style="display: flex; gap: 15px;">
+            <a href="#top" style="color: white; text-decoration: none; font-size: 1.2rem; font-weight: 500; border: 1px solid white; padding: 5px 15px; border-radius: 5px;">
+                กลับไปด้านบนสุด
+            </a>
+            
+        </div>
+    </header>
+    
+    </div>
+</div>
+
+<div class="container">
+    <h2>การแข่งขัน</h2>
+    <div class="project-grid">
+    
+       <a href="https://www.google.com" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="Robo_Soccer_0001.jpg" alt="Work">
+                <div class="project-info">
+                    <h3>ROBO-SOCCER</h3>
+                    <p>การแข่งขันระดับประเทศจัดโดย<br>สถาบันเทคโนโลยีไทย-ญี่ปุ่น</p>
+                </div>
+            </div>
+        </a>       
+
+       <a href="indexrbac.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="22903.jpg" alt="Work">
+                <div class="project-info">
+                    <h3>Robotics and Automation Competition</h3>
+                    <p>การแข่งขันระดับประเทศจัดโดย TECHNO PARK <br>ของมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+                </div>
+            </div>
+        </a>
+
+
+       <a href="https://www.google.com" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="22906.jpg" alt="Work">
+                <div class="project-info">
+                    <h3>ศิลปหัตถกรรมนักเรียน ครั้งที่ 73</h3>
+                    <p>ระดับเขตพื้นที่การศึกษา</p>
+                </div>
+            </div>
+        </a>
+
+ 
+
+    </div>
+</div>
+
+<div class="container">
+    <h2>การอบรมและเข้าค่าย</h2>
+    <div class="project-grid">
+        
+        <a href="indexfibo.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="22905.jpg" alt="Work">
+                <div class="project-info">
+                    <h3>FIBO ROBOCAMP 14</h3>
+                    <p>สถาบันวิทยาการหุ่นยนต์ภาคสนามมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="indexcupy.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="certificate_51927_1732450-1732450-17767622914521.jpg" alt="Work">
+                <div class="project-info">
+                    <h3>Learn Python: Language Basics and Fundamental Data Processing</h3>
+                    <p>คอร์สอบรมออนไลน์ของ Chulalongkorn University</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="indexcujava.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="certificate_51612_1732450-1732450-17768476476224.jpg" alt="Work">
+                <div class="project-info">
+                    <h3>การเขียนโปรแกรมภาษา JavaScript</h3>
+                    <p>คอร์สอบรมออนไลน์ของ Chulalongkorn University</p>
+                </div>
+            </div>
+        </a>
+
+
+        <a href="indexbc.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="DQ2VE8GSBQNVZ_page-0001.jpg" alt="Work">
+                <div class="project-info">
+                    <h3>BASIC CYBERSECURITY</h3>
+                    <p>สำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="project-card">
+            <div class="img-placeholder"><img src="403.jpg" alt="Work 2"></div>
+            <div class="project-info">
+                <h3>ค่ายคอมพิวเตอร์และเทคโนโลยี</h3>
+                <p>โรงเรียนพระปฐมวิทยาลัย</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="others"></div>
+    <header>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1 style="margin: 0;">ฝึกประสบการณ์และอื่นๆ</h1>
+            <div style="display: flex; gap: 15px;">
+                <a href="#top" style="color: white; text-decoration: none; font-size: 1.2rem; font-weight: 500; border: 1px solid white; padding: 5px 15px; border-radius: 5px;">
+                    กลับไปด้านบนสุด
+                </a>
+                
+            </div>
+    </header>
+</div>
+
+<div class="container">
+    <div class="project-grid">
+    
+       <a href="https://www.google.com" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="skm.png" alt="Work">
+                <div class="project-info">
+                    <h3>ฝึกประสบการณ์</h3>
+                    <p>บริษัทหนองโพจังหวัดราชบุรี</p>
+                </div>
+            </div>
+        </a>       
+
+       <a href="indexrbac.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="bchn.png" alt="Work">
+                <div class="project-info">
+                    <h3>ฝึกประสบการณ์</h3>
+                    <p>โรงพยาบาลกรุงเทพคริสเตียนนครปฐม</p>
+                </div>
+            </div>
+        </a>
+
+
+       <!-- <a href="https://www.google.com" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+            <img src="22906.jpg" alt="Work">
+                <div class="project-info">
+                    <h3>ศิลปหัตถกรรมนักเรียน ครั้งที่ 73</h3>
+                    <p>ระดับเขตพื้นที่การศึกษา</p>
+                </div>
+            </div>
+        </a> -->
+
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 50px;">
+<div style="text-align: center; margin-top: -50px;">
+    <a href="https://github.com/yourusername" target="_blank" style="margin: 10px;">GitHub</a>
+    <!-- <a href="golddy046@gmail.com" style="margin: 10px;">ส่งอีเมลหาผม</a> -->
+</div>
+</div>
+
+</body>
+</html>
