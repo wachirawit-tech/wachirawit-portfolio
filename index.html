@@ -115,13 +115,62 @@
             object-fit: cover;
         }
         @media (max-width: 768px) {
-         .container {
-             padding: 20px 15px; /* ในมือถือใช้ระยะห่างน้อยลงนิดหน่อยเพื่อให้มีพื้นที่โชว์ภาพ */
-         }
+    /* 1. จัดการ Header ให้ปุ่มเล็กลงและไม่ซ้อนกัน */
+    header {
+        padding: 1rem 0.5rem; /* ลดพื้นที่ว่างบนล่าง */
+    }
     
-         .project-grid {
-              gap: 20px;
-         }
+    header div {
+        flex-direction: column; /* ให้โลโก้อยู่บน ปุ่มอยู่ล่าง */
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 1.4rem; /* ลดขนาดคำว่า PORTFOLIO */
+    }
+
+    header div div {
+        flex-direction: row !important; /* บังคับให้ปุ่มเมนูเรียงแนวนอนคู่กัน */
+        justify-content: center;
+        width: 100%;
+        gap: 8px;
+    }
+
+    header a {
+        font-size: 0.8rem !important; /* ลดขนาดตัวอักษรในปุ่ม */
+        padding: 5px 8px !important; /* ลดขนาดปุ่ม */
+        white-space: nowrap; /* ป้องกันข้อความในปุ่มตกบรรทัด */
+    }
+
+    /* 2. ปรับส่วนแนะนำตัว (Intro) ให้ดูสะอาดตาขึ้น */
+    .intro-section {
+        padding: 20px 15px;
+    }
+
+    .intro-text {
+        padding: 20px;
+        max-width: 90%; /* ไม่ให้กล่องกว้างเกินไป */
+    }
+
+    .intro-text p {
+        font-size: 0.9rem; /* ปรับตัวหนังสือให้พอดีกับจอมือถือ */
+    }
+
+    .intro-image {
+        width: 250px; /* ลดขนาดรูปลงให้พอดีกับความกว้างมือถือ */
+        height: 250px;
+    }
+
+    /* 3. ปรับการแสดงผลงานให้ไม่ติดขอบ */
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .project-card {
+        width: 100%; /* ให้การ์ดผลงานกว้างเต็มหน้าจอ */
+        margin-bottom: 20px;
+    }
+}
         
     </style>
 </head>
