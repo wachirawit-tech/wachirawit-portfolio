@@ -89,7 +89,7 @@
             color: #666;
             font-size: 1rem;
         }
-        @media (max-width: 768px) {
+     @media (max-width: 768px) {
     /* 1. ปรับส่วน Intro (กล่องข้อความกับรูป) ให้เรียงต่อกันเป็นแนวตั้ง */
     .intro-section {
         flex-direction: column; 
@@ -109,23 +109,24 @@
     }
 
     /* 3. ปรับ Layout รายการผลงานที่คุณเพิ่งเพิ่ม */
-    .work-item {
-        flex-direction: column; /* ให้รูปอยู่บน ข้อความอยู่ล่าง */
-        align-items: flex-start;
+   .work-item {
+        flex-direction: column; /* เรียงเป็นแนวตั้ง */
+        align-items: center;    /* จัดให้อยู่กลางหน้าจอทั้งรูปและข้อความ */
+        gap: 15px;              /* ลดระยะห่างระหว่างรูปกับข้อความลงหน่อย */
+        width: 100%;
     }
 
     .work-image {
-        width: 100%;  /* รูปกว้างเต็มจอในมือถือ */
-        height: 250px;
+        width: 100%;            /* รูปกว้างเต็มพื้นที่ container */
+        max-width: 350px;       /* กำหนดความกว้างสูงสุดของรูปไม่ให้ใหญ่เกินไปในจอมือถือ */
+        height: 250px;          /* ความสูงคงที่เพื่อให้เป็นสี่เหลี่ยม */
     }
 
     .work-content {
-        max-width: 100%;
-    }
-
-    /* 4. ปรับ Header ให้ตัวอักษรเล็กลง */
-    header h1 {
-        font-size: 1.5rem;
+        width: 100%;            /* บังคับให้กล่องข้อความกว้าง 100% */
+        max-width: 350px;       /* กำหนดให้กว้างเท่ากับรูปภาพ (ต้องเท่ากับ max-width ของรูป) */
+        padding: 20px;          /* ลด Padding ในกล่องข้อความลงเพื่อให้มีที่ว่างสำหรับตัวหนังสือ */
+        box-sizing: border-box; /* สำคัญ: เพื่อไม่ให้ padding ทำให้กล่องขยายจนล้นจอ */
     }
     </style>
 </head>
