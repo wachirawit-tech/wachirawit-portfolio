@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <h1 style="margin: 0;">การแข่งขันศิลปหัตถกรรม ครั้งที่ 73 หุ่นยนต์ระดับสูง</h1>
+        
+        
+
+    </div>
+</header>
+
+    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio pufar</title>
+    <style>
+        body { font-family: 'Kanit', 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #f8f9fa; }
+        header { 
+
+            
+            background: rgb(231, 64, 17); color: #ffffff; padding: 2rem; text-align: center; box-shadow: 0 10px 12px rgba(0,0,0,0.1);
+        }
+                /* ส่วนตกแต่ง (CSS) */
+                /* ส่วนรายการผลงานหลัก */
+        .works-list {
+            max-width: 1200px;       /* กว้างสูงสุดเพื่อไม่ให้ล้นหน้าจอเกินไป */
+            margin: auto;            /* จัดกลางเว็บแนวนอน */
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;  /* ให้แต่ละรายการ (work-item) เรียงต่อกันลงมา */
+            gap: 30px;               /* ระยะห่างระหว่างรายการ */
+        }
+
+        /* สไตล์หัวข้อ */
+        .works-list h2 {
+            text-align: center;
+            color: #e74011;         /* ใช้สีส้มที่คุณเพิ่งถามมาเพื่อเน้นหัวข้อ */
+            margin-bottom: 40px;
+        }
+
+        /* สไตล์แต่ละรายการ (Layout หลักแบบFlexbox) */
+        .work-item {
+            display: flex;
+            justify-content: flex-start; /* จัดให้ลูกๆ เริ่มจากซ้ายสุด */
+            align-items: center;     /* จัดกลางแนวตั้ง */
+            gap: 20px;               /* ระยะห่างระหว่างรูปภาพกับกล่องข้อความ */
+            width: 100%;             /* กว้างเต็มพื้นที่แม่ */
+        }
+
+        /* สไตล์กรอบรูป */
+        .work-image {
+            width: 350px;            /* กำหนดความกว้างของรูป */
+            height: 250px;           /* กำหนดความสูงให้เป็นสี่เหลี่ยมจัตุรัส (ตามรูปตัวอย่าง) */
+            border-radius: 20px;     /* ทำมุมโค้งมนตามรูปตัวอย่าง */
+            overflow: hidden;        /* ตัดรูปที่อยู่ด้านในตามมุมโค้งของกรอบ */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* เพิ่มเงานิดนึงเพื่อให้ดูลอยขึ้น */
+            background-color: #f1f1f1; /* สีพื้นหลังกรณีรูปยังไม่โหลด */
+        }
+
+        /* สไตล์ของรูปภาพในกรอบ */
+        .work-image img {
+            width: 100%;             /* กว้างเต็มพื้นที่กรอบ */
+            height: 100%;            /* สูงเต็มพื้นที่กรอบ */
+            object-fit: cover;       /* ตัดรูปให้พอดีกรอบโดยไม่เสียสัดส่วน (ทริคสำคัญ) */
+        }
+
+        /* สไตล์กล่องข้อความ */
+        .work-content {
+            background: white;       /* พื้นหลังสีขาวสำหรับกล่องข้อความ */
+            padding: 30px;           /* พื้นที่หายใจด้านใน */
+            border-radius: 20px;     /* ทำมุมโค้งมนตามรูปตัวอย่าง */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* เพิ่มเงาให้นูนขึ้นมานิดนึง */
+            width: 100%;             /* กว้างเต็มพื้นที่แม่ (ที่เหลือจากรูปภาพ) */
+            max-width: 700px;       /* ความกว้างสูงสุดของกล่องข้อความ เพื่อไม่ให้ยาวเกินไป */
+        }
+
+        /* สไตล์ข้อความในกล่อง */
+        .work-content h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .work-content p {
+            margin: 0;
+            color: #666;
+            font-size: 1rem;
+        }
+    @media (max-width: 768px) {
+    /* 1. ปรับส่วน Intro (กล่องข้อความกับรูป) ให้เรียงต่อกันเป็นแนวตั้ง */
+    .intro-section {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .intro-text, .intro-image {
+        max-width: 100%; /* ให้กว้างเต็มหน้าจอ */
+        width: 100%;
+        height: auto;   /* ปรับความสูงตามความเหมาะสม */
+    }
+
+    /* 2. ปรับ Card ผลงานให้กว้างเต็มหน้าจอ */
+    .project-card {
+        width: 100%;
+    }
+
+    /* 3. ปรับ Layout รายการผลงานที่คุณเพิ่งเพิ่ม */
+   .work-item {
+        flex-direction: column; /* เรียงเป็นแนวตั้ง */
+        align-items: center;    /* จัดให้อยู่กลางหน้าจอทั้งรูปและข้อความ */
+        gap: 15px;              /* ลดระยะห่างระหว่างรูปกับข้อความลงหน่อย */
+        width: 100%;
+    }
+
+    .work-image {
+        width: 100%;            /* รูปกว้างเต็มพื้นที่ container */
+        max-width: 350px;       /* กำหนดความกว้างสูงสุดของรูปไม่ให้ใหญ่เกินไปในจอมือถือ */
+        height: 250px;          /* ความสูงคงที่เพื่อให้เป็นสี่เหลี่ยม */
+    }
+
+    .work-content {
+        width: 100%;            /* บังคับให้กล่องข้อความกว้าง 100% */
+        max-width: 350px;       /* กำหนดให้กว้างเท่ากับรูปภาพ (ต้องเท่ากับ max-width ของรูป) */
+        padding: 20px;          /* ลด Padding ในกล่องข้อความลงเพื่อให้มีที่ว่างสำหรับตัวหนังสือ */
+        box-sizing: border-box; /* สำคัญ: เพื่อไม่ให้ padding ทำให้กล่องขยายจนล้นจอ */
+    }
+}
+    </style>
+</head>
+<body>
+<div class="works-list">
+
+
+    <div class="work-item">
+        <div class="work-image">
+            <img src="sp3.jpg" alt="Work 1">
+            </div>
+        <div class="work-content">
+            <h3>หน้าที่ที่ได้รับผิดชอบ</h3>
+            <p>-รับหน้าที่เป็นคนเขียนโค้ด Servo motor<br>-เป็นผู้ประกอบหุ่นยนต์</p>
+        </div>
+    </div>
+
+    <div class="work-item">
+        <div class="work-image">
+            <img src="sp2.jpg" alt="Work 2">
+        </div>
+        <div class="work-content">
+            <h3>รายละเอียดงาน</h3>
+            <p>นี่เป็นการแข่งครั้งแรกของผม การแข่งครั้งนี้ทำให้ผมได้รู้จักกับบอร์ดไมโครคอนโทรลเลอร์ที่มากขึ้น<br>ซึ่งผมได้เริ่มต้นหุ่นตัวนี้ด้วยการประกอบตั้งแต่ประกอบฐานของหุ่นต่อสายเชื่อมต่อส่วนต่างๆจนถึงการเขียนโค้ดให้บอร์ดไมโครคอนโทรลเลอร์</p>
+        </div>
+    </div>
+
+    <div class="work-item">
+        <div class="work-image">
+            <img src="sp.png" alt="Work 3">
+        </div>
+        <div class="work-content">
+            <h3>ปัญหาและอุปสรรคที่เจอ</h3>
+            <p>ปัญหาที่พบคือขนาดของหุ่นยนต์ที่ใหญ่เกินไปทำให้เลี้ยวยากเลี้ยวไม่ค่อยตรง</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
