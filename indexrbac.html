@@ -89,7 +89,44 @@
             color: #666;
             font-size: 1rem;
         }
+        @media (max-width: 768px) {
+    /* 1. ปรับส่วน Intro (กล่องข้อความกับรูป) ให้เรียงต่อกันเป็นแนวตั้ง */
+    .intro-section {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 30px 15px;
+    }
 
+    .intro-text, .intro-image {
+        max-width: 100%; /* ให้กว้างเต็มหน้าจอ */
+        width: 100%;
+        height: auto;   /* ปรับความสูงตามความเหมาะสม */
+    }
+
+    /* 2. ปรับ Card ผลงานให้กว้างเต็มหน้าจอ */
+    .project-card {
+        width: 100%;
+    }
+
+    /* 3. ปรับ Layout รายการผลงานที่คุณเพิ่งเพิ่ม */
+    .work-item {
+        flex-direction: column; /* ให้รูปอยู่บน ข้อความอยู่ล่าง */
+        align-items: flex-start;
+    }
+
+    .work-image {
+        width: 100%;  /* รูปกว้างเต็มจอในมือถือ */
+        height: 250px;
+    }
+
+    .work-content {
+        max-width: 100%;
+    }
+
+    /* 4. ปรับ Header ให้ตัวอักษรเล็กลง */
+    header h1 {
+        font-size: 1.5rem;
+    }
     </style>
 </head>
 <body>
